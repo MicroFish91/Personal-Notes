@@ -1,0 +1,34 @@
+/* https://www.youtube.com/watch?v=srvUrASNj0s */
+
+/* Click to left of elements tab in Chrome debugger to see options */
+/* +++ showing different screen emulations for mobile devices +++ */
+
+/* Use larger width percentages for global containers so that they don't seem to have large margins on smaller screens */
+/* Set Min and Max Widths so that they don't look crazy in extreme cases. */
+
+.container {
+    width: 90%;
+    max-width: 620px;
+    min-width: 200px;
+    border: 2px solid magenta;
+    margin: 0 auto;
+}
+
+/* em, rem, px FOR FONTS */
+/* em is relative to the font-size of its direct or nearest parent, rem is only relative to the html (root) font-size */
+/* Pixels used to be a static size, but now it follows a reference pixel unit, so in theory it is a responsive unit as well */
+/* and can work in a lot of cases. */
+
+/* em, rem, px FOR ELSEWHERE (e.g. padding)  */
+/* em is relative to the 'font-size' of that same element (e.g. padding on a button) [not relative to parent] */
+
+/* General Rules of thumb:  
+    Font-size: rem; 
+    padding & margin: em;
+    widths: em or percentage
+*/
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}

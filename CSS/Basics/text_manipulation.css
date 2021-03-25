@@ -5,7 +5,7 @@
     text-align: center;
     font-weight: 400; /* Bolding (1 - 800 highest you should realistically go); 400 is for normal bolding */
     font-style: italic; /* Italics among many other options. */
-
+    font-size: 1.5rem;
 }
 
 /* Std. Font Families - Collections of Fonts that have similar features */
@@ -28,3 +28,5 @@ body {
 /* https://fonts.google.com */
 
 /* Post your embed link above the CSS style sheet in the html doc. */
+
+/* Font-Size: rem is relative to html/body root font size, em is relative to parent element */
