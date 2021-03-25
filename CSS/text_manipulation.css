@@ -1,0 +1,30 @@
+/* Basic Text Manipulation */
+.link {
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400; /* Bolding (1 - 800 highest you should realistically go); 400 is for normal bolding */
+    font-style: italic; /* Italics among many other options. */
+
+}
+
+/* Std. Font Families - Collections of Fonts that have similar features */
+/* There are 3 main font families that you can use: Serif, Sans Serif, Monospace (there are others as well) */
+/* Serif fonts have small lines at the end of some letters - most academic papers use this style (e.g. Times New Roman) */
+/* Sans Serif dont have these small lines are easier to read. (e.g. Calibri) */
+/* Monospace - all characters have the same width (e.g. Courier New) */
+
+body {
+    font-family: sans-serif; /* one way */
+    font-family: "Times New Roman", serif; /* another way - example: use times new roman, if doesn't exist, just use a serif font */
+}
+
+/* Often times a different font is used for headers vs normal body text */
+
+/* ++++++++++++++++++ */
+/* ++External Fonts++ */
+/* ++++++++++++++++++ */
+
+/* https://fonts.google.com */
+
+/* Post your embed link above the CSS style sheet in the html doc. */

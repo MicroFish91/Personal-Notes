@@ -1,0 +1,45 @@
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++ Colors +++++++++++++++++++++++ */
+/* https://www.rapidtables.com/web/css/css-color.html */
+/* ++++++++++ Or Google: 'Color Picker' +++++++++++++ */
+
+/* Examples of Backgrounds */
+body {
+    background: url("");
+}
+
+body {
+    background: rgb(186, 133, 9);
+}
+
+#service-image {
+    background-repeat: no-repeat;
+    /* background-size: width, height; */
+    background-size: 25px 25px;
+    background-size: 50% 50%;
+    background-size: auto auto; /* Scales the background image such that intrinsic proportions are maintained */
+    background-size: cover;  /* Resizes to fit whole background area, but will often distort the image resolution */
+    background-size: contain; /* Tries to resize to fit the whole background area without distorting proportions of original image */
+}
+
+
+/* Opacity/Transparency */
+body {
+    background: rgba(204, 229, 255, 0.4) /* a is opacity, can be any value between 0 and 1, signifies an opacity/transparency percentage */
+}
+
+
+/* ++++++++++++ Gradients ++++++++++++ */
+/* ++ Two types: Radial & Linear ++*/
+ 
+/* Linear */
+#service-image {
+    background: linear-gradient(to right, rgb(94, 255, 126), rgb(94, 255, 50), rgb(50, 50, 50), rgb(100, 100, 100), rgb(75, 100, 150)); /* 'to' and then the direction, then your standard colors */
+    background: linear-gradient(to bottom right, rgb(94, 255, 126), rgba(94, 255, 126, 0)); /* Cool fading out effect */
+    background: linear-gradient(215deg, rgb(94, 255, 126), rgba(94, 255, 126, 0)); /* For a specific angle */
+}
+
+/* Radial */
+#service-image {
+    background: radial-gradient(red 20%, blue 40%, green 55%);
+}

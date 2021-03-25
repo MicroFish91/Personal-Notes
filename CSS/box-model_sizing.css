@@ -1,0 +1,44 @@
+/* https://www.w3schools.com/csSref/css_units.asp */
+/*    List of CSS Units for Expressing Length     */
+/*    Generally want to use releative units       */
+/*        For dynamic web page design             */
+
+/* Use absolute sizing for length and relative sizing for width */
+
+/* Order - Content, Padding, Border, Margin */
+
+/* +++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++ Padding ++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++ */
+
+
+#service-image {
+    /* padding: top right bottom left */
+    padding: 40px; /* Same as padding: 40px 40px 40px 40px */
+    padding: 20px, 40px; /* If the padding propery has two values: top & bottom have 20px, R&L have 40px */
+    padding: 25px 50px 75px; /* If the padding property has three values: top padding is 25px, R&L is 50px, bottom is 75px */
+    padding: 25px, 30px, 40px, 75px;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++ Border ++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++ */
+
+#service-image {
+    /* border: size style color; */
+    border: 2px solid rgb(204, 229, 255); /* Main Styles: Dotted, Dashed, Solid, & Double */
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++ Margin +++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++ */
+
+#service-image {
+
+    /* (4 value) margin: top right bottom left; */
+    /* (3 value) margin: top, R+L, bottom; */
+    /* (2 value) margin: top+bottom, R+L; */
+
+}

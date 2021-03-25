@@ -1,0 +1,173 @@
+/* ++++++++++++++++++++++++++ */
+/* Primary Display - Method 1 */
+/* ++++++++++++++++++++++++++ */
+
+/* Float */
+#about-us-imnage {
+    float: left;
+    float: right;
+    float: inherit; /* Inherit parent float style */
+}
+
+/* Display */
+#about-us-imnage {
+    display: none; /* Makes an element not take up its normal block space */
+    display: inline-block; /* Brings block level elements inline while maintaining some of the original block spacing */
+    display: inline; /* Brings block level elements inline without maintaining some of the original block spacing */
+
+}
+
+
+/* ++++++++++++++++++++++++++ */
+/* Primary Display - Method 2 */
+/* ++++++++++++++++++++++++++ */
+
+/* Flexbox - Another way to display items*/
+/* A flexbox is split into two mains parts: Container, and contained items */
+
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+/*
+    Quick Reference - PARENT/CONTAINER Properties
+    1.  flex-direction: Establishes main axis direction (rows or columns)
+    2.  justify-content: Establishes alignment and spacing of items along main axis
+    3.  align-items: Establishes alignment and spacing of items along cross axis
+
+*/
+
+/* First set parents container with display: flex */
+
+.container {
+    display: *flex;
+    flex-direction: *row | row-reverse | *column | column-reverse; /* This establishes the main-axis - primarily laying out either in horizontal rows or vertical columns */
+    flex-wrap: nowrap | *wrap | wrap-reverse; /* By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property */
+    justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right.... + safe | unsafe; /* This defines the alignment and space of the items ALONG the main axis. */
+    align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end ... + safe | unsafe; /* Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis) */
+    
+}
+
+/*
+    Quick Reference - CHILD/FLEX ITEM Properties
+    1.  order
+    2.  flex-grow: This dictates what amount of the available space inside the flex container the item should take up.
+    If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. 
+    If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).
+    Think of setting up size ratios to determine the divying up of remaining space.
+    Default is 0 - which means it does not grow
+    3.  flex-shrink: This defines the rate of shrinkage.  Default value is 1.  Same idea as the ratio concept for flex-grow.
+    Setting value to 0 will cause the item to never shrink.
+    4.  flex-basis: This defines the default size of an element before the remaining space is distributed.
+    If set to 0, the extra space around content isn’t factored in. If set to auto, the extra space is distributed based on its flex-grow value.
+    5.  align-self: Overrides the container's default align-item value.
+*/
+
+/* Since a lot of these elements may be unique to individual flex elements, consider directly adding them into
+the html as individual style elements rather than globally to the class*/
+.container-item {
+    *order: 1;
+    flex-grow: 1;
+    flex-shrink: ;
+    flex-basis: 100px;
+    *flex: grow shrink basis; /* One Line Version */
+    *align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+
+
+/* Ordering flex items - default value is 0 */
+
+<div class="container-item" style="order: 3; 
+flex: 1 1 100px;
+" > Flex Item One </div>
+<div class="container-item" style="order: 1; 
+flex: 1 1 100px;
+" > Flex Item Two </div>
+<div class="container-item" style="order: 2; 
+flex: 1 1 100px;
+" > Flex Item Three </div>
+
+
+/* Nested Flexbox Example: */
+/* https://www.codecademy.com/courses/learn-css/lessons/learn-flexbox-l/exercises/nested-flex */
+
+
+
+
+/* ++++++++++++++++++++ */
+/* +++++++ Grid +++++++ */
+/* ++++++++++++++++++++ */
+
+/* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+
+/* Quick Reference:
+
+    1.  Create grid layout using 'grid-template' in a grid container parent
+    2.  Manage overall layout using grid display item commands - 'justify-items', 'justify-content', 'align-items', 'align-content'
+    3.  Specify how many grid rows/columns each item takes
+
+*/
+
+/* Defining grid columns and rows */
+.grid-container {
+    display: grid;
+    grid-template-columns: 40px 50px auto 50px 40px; /* Example: 5 columns of defined width */
+    grid-template-rows: 25% 100px auto;  /* Example: 3 rows of a defined height */
+    
+    /* Can also define line names for cols and rows.  Example: */
+    grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+
+    /* The fr unit allows you to set the size of a track as a fraction of the free space of the grid container. 
+    For example, this will set each item to one third the width of the grid container: */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* Shorthand - one command */
+    grid-template: <grid-template-rows> / <grid-template-columns>;
+
+}
+
+
+/* Grid Gap */
+.grid-container {
+    display: grid;
+    gap: <grid-row-gap> <grid-column-gap>;
+    gap: 15px 10px; /* Or you can also use: 'grid-gap'.  Each value signifies a line size */
+
+}
+
+/* Displaying grid items */
+/* 
+    1.  justify-items (moves items within cells):  Aligns grid items along the inline (row) axis
+    2.  align-items (moves items within cells): Aligns grid items along the block (column) axis
+    3.  justify-content (moves the grid itself): Sometimes the total size of your grid might be less than the size of its grid container.
+    In this case you can set the alignment of the grid within the grid container.
+    This property aligns the grid along the inline (row) axis
+    4.  align-content (moves the grid itself):  Sometimes the total size of your grid might be less than the size of its grid container. 
+    This property aligns the grid along the block (column) axis
+*/
+
+.grid-container {
+    display: grid;
+    justify-items: start | end | center | stretch;
+    align-items: start | end | center | stretch;
+    justify-content: start | end | center | stretch | space-around | space-between | space-evenly;
+    align-content: start | end | center | stretch | space-around | space-between | space-evenly;
+}
+
+/* Child/Grid Item Properties */
+/* 
+    1.  grid-column: specify how many columns the specific item takes up
+    2.  grid-row: specify how many rows the specific item takes up
+*/
+
+
+/* 
+    1.  grid-column: <start-line> / <end-line>
+    2.  grid-row: <start-line> / <end-line>
+*/
+<div class="grid-item" style="
+grid-column: 1 / 3; /* or grid-column: 1 / span 2 */
+grid-row: 1 / 3; /* or grid-column: 1 / span 2*/
+"> Grid Item One </div>
+
+/* or you can use grid-area: */
+grid area: <row-start> / <column-start> / <row-end> / <column-end>

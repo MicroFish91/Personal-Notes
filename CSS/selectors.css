@@ -1,0 +1,73 @@
+/* https://flukeout.github.io/ */
+/* https://www.youtube.com/watch?v=1Rs2ND1ryYc&t=1574s */
+
+/* +++++++++++++++ */
+/* Pseudoselectors */
+/* +++++++++++++++ */
+
+#google-link:link {
+    color: blue;
+}
+
+#google-link:visited {
+    color: red;
+}
+
+h2:hover {
+    color: red;
+}
+
+/* ++++++++++++++++++ */
+/* Advanced Selectors */
+/* ++++++++++++++++++ */
+
+/* Adjacent Sibling Selector - Elements that follow one another are called siblings. They're on the same level, or depth.
+Example: every anchor tag that DIRECTLY follows an h2 */
+h2 + a {
+    color: red;
+}
+
+/* General Sibling Selector - You can select ALL siblings of an element that follow it. 
+Example: every button that is followed by a text area under the same parent*/
+textarea ~ button {
+    color: purple;
+}
+
+/* Child Selector - You can select elements that are DIRECT children of other elements, won't grab subchildren */
+ul > li {
+    color: blue;
+}
+
+/* Descendant Selector - Selects all children and subchildren elements of B inside A */
+ul li {
+    color: green;
+}
+
+/* ++++++++++++++++++ */
+/* Attribute Selectors */
+/* ++++++++++++++++++ */
+
+/* h2[attr=value] */
+
+h2[class=className] {
+    color: blue;
+}
+
+img[src=hyperlinkName] {
+    color: blue;
+}
+
+/* Attribute starts with selector - An example that selects every single image in a folder */
+img[src^="../img"] {
+    color: red;
+}
+
+/* Attribute ends with selector */
+img[src$=""] {
+    color: red;
+}
+
+/* Attribute Wildcard Selector - if it at all contains */
+img[src*=""] {
+    color: red;
+}
