@@ -3,6 +3,8 @@
 /* https://www.rapidtables.com/web/css/css-color.html */
 /* ++++++++++ Or Google: 'Color Picker' +++++++++++++ */
 
+/* Observation: Background (Color) takes up the whole content + padded area */
+
 /* Examples of Backgrounds */
 body {
     background: url("");
@@ -21,6 +23,10 @@ body {
     background-size: cover;  /* Resizes to fit whole background area, but will often distort the image resolution */
     background-size: contain; /* Tries to resize to fit the whole background area without distorting proportions of original image */
 }
+
+/* Box-Shadow */
+box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+
 
 
 /* Opacity/Transparency */

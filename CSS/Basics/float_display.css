@@ -2,12 +2,24 @@
 /* Primary Display - Method 1 */
 /* ++++++++++++++++++++++++++ */
 
+/* 
+    When an element is floated, it is taken out of the normal flow of the document 
+    (though still remaining part of it). It is shifted to the left, or right, until it touches the edge 
+    of its *containing box, or another floated element.
+*/
+
 /* Float */
 #about-us-imnage {
     float: left;
     float: right;
     float: inherit; /* Inherit parent float style */
 }
+
+/* By default, elements will flow over their parent elements if a property like float or certain position values are used. 
+This can be adjusted using the overflow property.
+Overflow works across the x and y axis of the document. For the example, setting the container to overflow: auto 
+will change the element to allow elements that overflow (like a floating image) to remain inside the container element. */
+
 
 /* Display */
 /* Elements normally have a 'display: block' or 'display: inline' as a default from the browser */
