@@ -10,6 +10,14 @@
 }
 
 /* Display */
+/* Elements normally have a 'display: block' or 'display: inline' as a default from the browser */
+/* Block elements (stack one of top of the other): div, header, footer, main, h1-6, p, etc. */
+/* Inline elements (stay within the flow of what's around them): a, strong, em, span, etc. */
+
+/* Block elements will normally take up 100% width of the row, unless the width is redefined */
+/* However, they will stay stack one on top of the other unless we use something like display: flex */
+/* Display Flex is covered more in the float_display.css section */
+
 #about-us-imnage {
     display: none; /* Makes an element not take up its normal block space */
     display: inline-block; /* Brings block level elements inline while maintaining some of the original block spacing */
@@ -39,7 +47,7 @@
 
 .container {
     display: *flex;
-    flex-direction: *row | row-reverse | *column | column-reverse; /* This establishes the main-axis - primarily laying out either in horizontal rows or vertical columns */
+    flex-direction: *row | row-reverse | *column | column-reverse; /* This establishes the main-axis - primarily laying out either in horizontal rows or vertical columns.  Default is set to row. */
     flex-wrap: nowrap | *wrap | wrap-reverse; /* By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property */
     justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right.... + safe | unsafe; /* This defines the alignment and space of the items ALONG the main axis. */
     align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end ... + safe | unsafe; /* Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis) */

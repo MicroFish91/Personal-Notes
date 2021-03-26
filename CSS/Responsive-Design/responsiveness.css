@@ -1,4 +1,5 @@
 /* https://www.youtube.com/watch?v=srvUrASNj0s */
+/* Really good reference for responsive layout with examples */
 
 /* Click to left of elements tab in Chrome debugger to see options */
 /* +++ showing different screen emulations for mobile devices +++ */
@@ -32,3 +33,39 @@ h1 {
     font-size: 3rem;
     margin-bottom: 0.5em;
 }
+
+
+/* MEDIA QUERIES */
+/* Media queries let us add new styles that target only specific conditions. */
+/* Both media types and conditions are optional. */
+
+/* Guideline */
+@media media-type and (media features) {
+
+}
+
+/* Example */
+@media screen and (min-width: 960px) { }
+
+/* Media type lets us target different types of media:
+    Screen: @media screen
+    Print: @media print
+    Speech: @media speech
+*/
+
+/* Media condition lets us target specific conditions within that media type. 
+    Widths: @media (min-width: 600px) {}
+    Orientation: @media (orientation: landscape) {}
+    Specific Features: @media (hover) {}
+*/
+
+/* Can also combine conditions */
+/* Example: this says for screen 400px <= x < 649px, color body background red */
+@media (min-width: 400px) and (max-width: 649px) {
+    body {
+        background: red;
+    }
+}
+
+/* Orientation: landscape - screen is wider than it is tall */
+/* Orientation: portrait - screen is taller than it is wide */
