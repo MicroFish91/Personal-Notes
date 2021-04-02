@@ -1,5 +1,7 @@
 // NPM Packages: npmjs.com
 
+// For Mac perfix command using 'sudo' anytime you make a -g (global) change via command-line
+
 // ** Semantic versioning (SemVer) **
 // 4.13.6 => Major.Minor.Patch
 // ^4.13.6 => '^' update any version that follows 4.x
@@ -20,5 +22,27 @@
 
 // ** Updating Local Packages **
 // Use 'npm outdated' to view information about updating local packages
+// 'npm updated' will update to the version under the 'Wanted' column
+// can use 'ncu' and 'ncu -u' to update up to latest version regardless of Semantic versioning
+// look up how to do this with individual packages as necessary *
 
-// 
+// ** Development dependencies (e.g. test dependencies) - package.json => devDependencies**
+// Should not make it into the production environment
+// use command 'npm i [package-name] --save-dev
+
+// ** Uninstall a Package **
+// 'npm un [package-name]'
+
+// ** Global Packages **
+// Packages that you can run from anywhere, not specific to a given project
+// npm is an example of such a package - npm i -g npm@version
+// 'npm i -g [package-name]'
+// To see outdated global packages - 'npm -g outdated'
+
+// ** Publishing a Package to NPM Website **
+// 'npm login' => username, pw, email
+// 'npm publish'
+
+// ** Updating a Published Package **
+// 'npm version [major | minor | patch]' - updates the major version, minor version, or patch version to the next level
+// then 'npm publish'
