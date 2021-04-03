@@ -1,7 +1,7 @@
 // Express is a framework that gives our web server application proper structure and makes it more modular,
 // readable, and maintainable
 
-// Express is built upon the HTTP between client and server
+// Express is a simple, minimalistic and lightweight framework for building web servers
 
 const express = require('express');
 const app = express();
