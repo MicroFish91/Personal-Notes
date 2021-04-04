@@ -4,6 +4,7 @@ const app = express();
 // middleware for processing req.body
 app.use(express.json());
 
+// localhost:3000/api/courses
 
 // ** HTTP GET REQUESTS USING EXPRESS **
 // if navigating to /api/courses/1 sends the following object {id: 1}
@@ -13,7 +14,7 @@ app.get('/api/courses/:id', (req, res) => {
 
 // if navigating to /api/posts/2018/1 sends the following object {year: 2018, month: 1}
 app.get('/api/posts/:year/:month', (req, res) => {
-    res.send(req.params.id);
+    res.send(req.params);
 });
 
 // if navigating to /api/posts/2018/1?sortBy=name sends the following object {sortBy: 'name'}
@@ -23,7 +24,7 @@ app.get('/api/posts/:year/:month', (req, res) => {
 
 // error message example
 app.get('/api/courses/:id', (req, res) => {
-    const course = courses.find(c => c.id === parseInt(req.params.id));
+    const course = courses.find(c => c.id == parseInt(req.params.id));
     if (!course) res.status(404).send('The course with the given id was not found.');
     res.send(course);
 });
