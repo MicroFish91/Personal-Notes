@@ -1,41 +1,67 @@
 const express = require('express');
+const Joi = require('joi');
 const app = express();
+const port = process.env.PORT || 3000;
 
-// middleware for processing req.body
+// For accessing req.body
 app.use(express.json());
 
-// localhost:3000/api/courses
+var genres = [
+    {id: 1, name: 'horror'},
+    {id: 2, name: 'romance'}
+];
 
-// ** HTTP GET REQUESTS USING EXPRESS **
-// if navigating to /api/courses/1 sends the following object {id: 1}
-app.get('/api/courses/:id', (req, res) => {
-    res.send(req.params.id);
+// Display All Genres
+app.get('/api/genres', (req, res) => {
+    res.send(genres);
 });
 
-// if navigating to /api/posts/2018/1 sends the following object {year: 2018, month: 1}
-app.get('/api/posts/:year/:month', (req, res) => {
-    res.send(req.params);
+// Display a Specific ID
+app.get('/api/genres/:id', (req, res) => {
+    const genre = genres.find((g) => g.id === parseInt(req.params.id));
+    !genre ? res.status(404).send('This genre with the given ID was not found.') : 
+    res.send(genre);
 });
 
-// if navigating to /api/posts/2018/1?sortBy=name sends the following object {sortBy: 'name'}
-app.get('/api/posts/:year/:month', (req, res) => {
-    res.send(req.query);
+// Update a Specific Genre
+app.put('/api/genres/:id', (req, res) => {
+    // Look up the course
+    const genre = genres.find((g) => g.id === parseInt(req.params.id));
+    // If course does not exist, display 404 error message
+    if (!genre) res.status(404).send('This genre with the given ID was not found.');
+
+    // Validate
+    const { error } = validateInput(req.body);  // error = req.body.error
+    // If invalid, return 400 error message
+    if (error) res.status(400).send(error.message);
+
+    // Update Course
+    genre.name = req.body.name;  // find allows you to update 
+    // Return updated course
+    res.send(genres);
 });
 
-// error message example
-app.get('/api/courses/:id', (req, res) => {
-    const course = courses.find(c => c.id == parseInt(req.params.id));
-    if (!course) res.status(404).send('The course with the given id was not found.');
-    res.send(course);
+// Delete an ID
+app.delete('/api/genres/:id', (req, res) => {
+    // Check if id exists
+    const genre = genres.find((g) => g.id === parseInt(req.params.id));
+    if (!genre) res.status(404).send('This genre with the given ID was not found.');
+
+    // Delete
+    const index = genres.indexOf(genre);
+    genres.splice(index, 1);
+
+    // Show what was deleted
+    res.send(genre);
 });
 
+// Validate Input
+function validateInput(userInput){
+    const schema = Joi.object({
+        name: Joi.string().alphanum().min(3).max(12).required()
+    });
+    return schema.validate(userInput);
+}
 
-// ** HTTP POST REQUESTS USING EXPRESS ** need a better example
-app.post('/api/courses', (req, res) => {
-    const course = {
-        id: course.length + 1,
-        name: req.body.name
-    };
-    courses.push(course);
-    res.send(course);
-});
+
+app.listen(port, () => console.log(`Listening on port ${port}`));
