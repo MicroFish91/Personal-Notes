@@ -19,9 +19,9 @@ app.use(function(req, res, next)) {
 // https://expressjs.com/en/resources/middleware.html
 
 
-// Helmet
+// 1) Helmet
 // 'npm i helmet'
 const helmet = require('helmet');
 app.use(helmet());
 
-// 
+// 2) Config
