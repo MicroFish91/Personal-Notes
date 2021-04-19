@@ -8,7 +8,7 @@ mongoose.connect('mongodb://localhost:27017/playground', {useNewUrlParser: true}
 
 // Schema Types: String, Number, Date, Buffer (binary data), Boolean, ObjectID, Array
 const courseSchema = new mongoose.Schema({
-    name: String,
+    name: { type: String, required: true },
     author: String,
     tags: [ String ],
     date: { type: Date, default: Date.now }, // or just 'date: Date'
