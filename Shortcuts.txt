@@ -1,1 +1,2 @@
 VSCode Shortcuts for Windows: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+VSCode Shorcuts for mac:      https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macOS.pdf
