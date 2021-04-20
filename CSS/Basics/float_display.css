@@ -34,7 +34,60 @@ will change the element to allow elements that overflow (like a floating image) 
     display: none; /* Makes an element not take up its normal block space */
     display: inline-block; /* Brings block level elements inline while maintaining some of the original block spacing */
     display: inline; /* Brings block level elements inline without maintaining some of the original block spacing */
+    display: block;
+}
 
+/* 
+fixes the box to your height and width, keeps padding from expanding past your defined heighth and width
+box-sizing: border-box 
+*/
+
+
+
+/* Position */
+/* Relative to current position (keeps original space occupied by the div) (example of use: indenting)*/
+#test {
+    position: relative;
+    left: 3em;
+    bottom: 3em;
+    background-color: red;
+}
+
+/* Absolute - same as relative but does not keep the original space occupied by the div */
+#test {
+    position: absolute;
+    bottom: 3em;
+}
+
+/* Can use image absolute to position an image inside of a container; user border box for a circle on parent to make a circular image */
+div{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+}
+img{
+    position: absolute;
+    left: -175px;
+    bottom: -80px;
+    height: 300px;
+}
+
+<div>
+    <img src="https://static.clubs.nfl.com/image/private/t_editorial_landscape_8_desktop_mobile/f_auto/cardinals/o4g7fexopf4yrc31idem.jpg" alt="">
+</div>
+
+/* Fixed/Sticky - good for fixing sidebars/navbars*/
+/* Fixed Absolutely to the position relative to your browser screen */
+#test {
+    position: fixed;
+}
+
+/* Sticky -  moves until 30px from the top then sticks there */
+#test {
+    position: sticky;
+    top: 30px;
 }
 
 
@@ -92,6 +145,14 @@ the html as individual style elements rather than globally to the class*/
     *align-self: auto | flex-start | flex-end | center | baseline | stretch;
 }
 
+/* The clear property specifies what elements can float beside the cleared element and on which side. */
+/* The most common way to use the clear property is after you have used a float property on an element.
+
+When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will appear below it on the web page. */
+
+.clear {
+    clear: both;
+}
 
 /* Ordering flex items - default value is 0 */
 

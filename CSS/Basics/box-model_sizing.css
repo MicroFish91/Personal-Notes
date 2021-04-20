@@ -20,6 +20,11 @@
     padding: 25px, 30px, 40px, 75px;
 }
 
+/* 
+fixes the box to your height and width, keeps padding from expanding past your defined heighth and width
+box-sizing: border-box 
+*/
+
 
 /* +++++++++++++++++++++++++++++++++++++ */
 /* ++++++++++++++ Border ++++++++++++++ */
