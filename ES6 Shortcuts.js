@@ -1,28 +1,54 @@
-// ES6 Code Snippet Shorcuts
-imp =	import fs from 'fs';
-imn =	import 'animate.css'
-imd =	import {rename} from 'fs';
-rqr =	require('');
+// ES6 Code Snippet Shorcuts (enter)
+
+// Import/export
+imp =	import fs from 'fs';  // imp = import project
+imn =	import 'animate.css'  // imn = import neutral
+imd =	import {rename} from 'fs';  // imd = import destructured
+rqr =	require(''); 
 mde =	module.exports = {};
-env =	export const nameVariable = localVariable;
+env =	export const nameVariable = localVariable; //env = environmental var.
 
+// Inside of a class
+con =	constructor() {}  // constructor
+met =	add() {}  // method
 
-con =	adds default constructor in the class constructor() {}
-met =	creates a method inside a class add() {}
+// Arrays
+fre =	array.forEach(currentItem => {}) //fre = for-each
+fof =	for(const item of object) {}  //fof = for-of
+fin =   for(const item in object) {}  //fin = for-in
 
+// Functions
+anfn =	(params) => {}  //anfn = anonymous function
+nfn =	const add = (params) => {} // nfn = named function
 
-fre =	array.forEach(currentItem => {})
-fof =	for(const item of object) {}
+// Destructuring
+dob =	const {rename} = fs   // dob = destructuring object
+dar =	const [first, second] = [1,2]  // dar = destructuring array
 
-anfn =	(params) => {}
-nfn =	const add = (params) => {}
-dob =	{rename} = fs
-
-sti =	setInterval(() => {});
+// Timed
+sti =	setInterval(() => {}); 
 sto =	setTimeout(() => {});
 
+// Promise
 prom =	return new Promise((resolve, reject) => {});
 thenc =	.then((res) => {}).catch((err) => {});
 
+// Console
 ccl =	console.clear()
 clg =	console.log(object)
+cer =   console.error(object)
+
+
+
+
+
+// ** React Snippets (tab) **
+
+// Stateless functional component
+sfc = const Home = () => {
+    return (  );
+}
+ 
+export default Home;
+
+// 
