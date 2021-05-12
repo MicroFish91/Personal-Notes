@@ -1,0 +1,8 @@
+git branch -d branch-name  (off of branch after merge)
+git branch -D branch-name  (off of branch)
+git branch -m branch-new-name  (on branch)
+
+git switch branch-name
+git switch -c branch-name
+
+git merge branch-name (merges branch-name into branch we are currently on)

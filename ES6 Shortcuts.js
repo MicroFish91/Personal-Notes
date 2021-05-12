@@ -52,3 +52,22 @@ sfc = const Home = () => {
 export default Home;
 
 // 
+imrc =	import React, { Component } from 'react'
+imrs =	import React, { useState } from 'react'
+imrse =	import React, { useState, useEffect } from 'react'
+
+props =	this.props.propName
+state =	this.state.stateName
+
+// Class
+
+// Constructor
+rconst =	constructor(props) with this.state
+bnd =	this.methodName = this.methodName.bind(this)
+
+// Render
+ren =	render() { return( ) }
+
+// Set State
+sst =	this.setState({ })
+ssf =	this.setState((state, props) => return { })
