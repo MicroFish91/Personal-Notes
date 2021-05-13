@@ -1,16 +1,22 @@
-git branch -r (list branches)
+1. git fetch
+2. git branch -r (list branches)
 
-git checkout -b branch-name origin/branch-name (one way to bring down a new branch)
+1. git checkout -b branch-name origin/branch-name (one way to bring down a new branch)
 or
-git fetch origin branch-name (second way to bring down a new branch)
-git checkout branch-name
+1. git fetch origin branch-name 
+2. git checkout branch-name (second way to bring down a new branch)
+or
+1. git switch branch-name (third way)
 
 git branch -d branch-name  (off of branch after merge)
-git branch -D branch-name  (off of branch)
+git branch -D branch-name  (off of branch, force delete)
 git branch -m branch-new-name  (on branch)
 
 git switch branch-name
+
 git switch -c branch-name
+  same as
+git checkout -b branch-name
 
 git merge branch-name (merges branch-name into branch we are currently on)
 git merge --abort
