@@ -60,6 +60,7 @@ props =	this.props.propName
 state =	this.state.stateName
 
 // Class
+rcc = std class boilerplate
 
 // Constructor
 rconst =	constructor(props) with this.state
