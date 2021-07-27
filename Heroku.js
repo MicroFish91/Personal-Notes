@@ -4,6 +4,8 @@
 // heroku create
 // git push heroku main
 
+// git subtree push --prefix server heroku main
+
 // psql db_name -f sql_file.sql
 // psql db_name < sql_file.sql
 // removedb db_name && createdb db_name && psql db_name < sql_file.sql

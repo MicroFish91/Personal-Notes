@@ -1,10 +1,9 @@
 // ES6 Code Snippet Shorcuts (enter)
 
 // Import/export
-imp =	import fs from 'fs';  // imp = import project
-imn =	import 'animate.css'  // imn = import neutral
-imd =	import {rename} from 'fs';  // imd = import destructured
-rqr =	require(''); 
+imp =	import 'animate.css'; // imn = import neutral
+import fs, { rename } from 'fs'; // imp = import project
+imn =	imd =	rqr =	require(''); 
 mde =	module.exports = {};
 env =	export const nameVariable = localVariable; //env = environmental var.
 
@@ -45,19 +44,20 @@ cer =   console.error(object)
 // ** React Snippets (tab) **
 
 // Stateless functional component
-sfc = const Home = () => {
+rfe = const Home = () => {
     return (  );
 }
  
 export default Home;
 
 // 
-imrc =	import React, { Component } from 'react'
-imrs =	import React, { useState } from 'react'
-imrse =	import React, { useState, useEffect } from 'react'
-
+imrc =	imp React, { Component } from 'react'
+imrs =	imp React, { useState } from 'react'
+imrse =	imp React, { useState, useEffect } from 'react'
 props =	this.props.propName
 state =	this.state.stateName
+cp→	const { } = this.props
+cs→	const { } = this.state
 
 // Class
 rcc = std class boilerplate
@@ -72,3 +72,9 @@ ren =	render() { return( ) }
 // Set State
 sst =	this.setState({ })
 ssf =	this.setState((state, props) => return { })
+
+
+// Browser router
+imb = { BrowserRouter as Router } from 'react-router-dom'
+imbc = { Route, Switch, NavLink, Link } from 'react-router-dom'
+

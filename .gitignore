@@ -1,2 +1,4 @@
 javascript/node/mongo-demo/adding_docs_and_querying/node_modules/
 javascript/node/mongo-demo/data_validation/node_modules/
+node_modules/
+package-lock.json
