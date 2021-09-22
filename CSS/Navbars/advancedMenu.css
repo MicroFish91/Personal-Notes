@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 97%;
+  width: 15%;
+}
+
+.nav-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 75%;
+  width: 60%;
+}
+
+.nav-link-title {
+  font-size: 2rem;
+}
+
+.nav-link-desc {
+  font-style: italic;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 60%;
+  width: 30%;
+  margin-right: 0.5em;
+  font-size: 2rem;
+}

@@ -1,0 +1,28 @@
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background-color: black;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  height: 100%;
+  width: 8%;
+  font-size: 1.2rem;
+}
+
+li:hover {
+  background-color: pink;
+  text-decoration: underline;
+}
+
+.icon {
+  color: purple;
+  font-size: 3rem;
+}
